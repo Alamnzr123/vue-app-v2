@@ -2,18 +2,23 @@
   "name": "vue-project-v2",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "dev": "vite",
+    "preview": "vite preview --port 4173",
+    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.0",
     "pinia": "^2.0.16",
+    "primevue": "^4.0.0",
     "vue": "^2.7.7",
-    "vue-router": "^3.5.4"
+    "vue-router": "^3.5.4",
+    "vue-star-rating": "^1.7.0",
+    "vue2-progress-bar": "^0.1.1",
+    "vuetify": "^2.6.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
@@ -28,10 +33,16 @@
     "eslint-plugin-vue": "^9.0.0",
     "jsdom": "^20.0.0",
     "prettier": "^2.5.1",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
     "start-server-and-test": "^1.14.0",
     "terser": "^5.14.2",
     "vite": "^3.0.2",
+    "vite-plugin-vuetify": "^2.0.3",
     "vitest": "^0.18.1",
-    "vue-template-compiler": "^2.7.7"
-  }
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "vue-template-compiler": "^2.7.7",
+    "vuetify-loader": "^1.9.2"
+  },
+  "type": "module"
 }
